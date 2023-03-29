@@ -1,0 +1,47 @@
+{
+  "groups": [
+    {
+      "name": "gateway",
+      "type": "ru.senya.gateway.config.GatewayProperties",
+      "sourceType": "ru.senya.gateway.config.GatewayProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "gateway.application-link",
+      "type": "java.lang.String",
+      "sourceType": "ru.senya.gateway.config.GatewayProperties"
+    },
+    {
+      "name": "gateway.calculation-link",
+      "type": "java.lang.String",
+      "sourceType": "ru.senya.gateway.config.GatewayProperties"
+    },
+    {
+      "name": "gateway.deal-code-domain",
+      "type": "java.lang.String",
+      "sourceType": "ru.senya.gateway.config.GatewayProperties"
+    },
+    {
+      "name": "gateway.deal-documents-link",
+      "type": "java.lang.String",
+      "sourceType": "ru.senya.gateway.config.GatewayProperties"
+    },
+    {
+      "name": "gateway.deal-send-domain",
+      "type": "java.lang.String",
+      "sourceType": "ru.senya.gateway.config.GatewayProperties"
+    },
+    {
+      "name": "gateway.deal-sign-domain",
+      "type": "java.lang.String",
+      "sourceType": "ru.senya.gateway.config.GatewayProperties"
+    },
+    {
+      "name": "gateway.offers-link",
+      "type": "java.lang.String",
+      "sourceType": "ru.senya.gateway.config.GatewayProperties"
+    }
+  ],
+  "hints": []
+}

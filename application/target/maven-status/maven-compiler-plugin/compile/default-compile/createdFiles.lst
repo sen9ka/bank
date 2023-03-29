@@ -1,0 +1,11 @@
+ru\senya\application\entity\dto\LoanOfferDTO$LoanOfferDTOBuilder.class
+ru\senya\application\Application.class
+ru\senya\application\services\ApplicationService.class
+ru\senya\application\entity\dto\LoanOfferDTO.class
+ru\senya\application\clients\DealClient$1.class
+ru\senya\application\clients\DealClient.class
+ru\senya\application\entity\dto\LoanApplicationRequestDTO$LoanApplicationRequestDTOBuilder.class
+ru\senya\application\config\RestTemplateConfig.class
+ru\senya\application\clients\DealClient$2.class
+ru\senya\application\controllers\ApplicationController.class
+ru\senya\application\entity\dto\LoanApplicationRequestDTO.class

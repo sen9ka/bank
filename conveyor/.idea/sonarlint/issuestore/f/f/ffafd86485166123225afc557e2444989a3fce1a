@@ -1,0 +1,15 @@
+
+J
+java:S1444"4Make this "public static BASE_LOAN_RATE" field final(üù
+[
+java:S1444"9Make this "public static SALARY_CLIENT_BONUS" field final(êë¡‡şÿÿÿÿ8Îß†…å0
+R
+java:S1444!"5Make this "public static INSURANCE_BONUS" field final(Ã™°Ñ8„Ï‹…å0
+o
+java:S3008"YRename this field "BASE_LOAN_RATE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üù
+€
+java:S3008"^Rename this field "SALARY_CLIENT_BONUS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êë¡‡şÿÿÿÿ8Ïß†…å0
+w
+java:S3008!"ZRename this field "INSURANCE_BONUS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã™°Ñ8…Ï‹…å0
+\
+java:S1118":Add a private constructor to hide the implicit public one.(Ø¡²›ÿÿÿÿÿ8ª‹…å0

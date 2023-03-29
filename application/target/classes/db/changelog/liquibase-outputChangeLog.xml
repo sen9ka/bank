@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet author="ars-s (generated)" id="1674571966050-1">
+        <createSequence sequenceName="application_application_id_seq"/>
+    </changeSet>
+    <changeSet author="ars-s (generated)" id="1674571966050-2">
+        <createSequence sequenceName="client_client_id_seq"/>
+    </changeSet>
+    <changeSet author="ars-s (generated)" id="1674571966050-3">
+        <createSequence sequenceName="credit_credit_id_seq"/>
+    </changeSet>
+    <changeSet author="ars-s (generated)" id="1674571966050-4">
+        <createSequence sequenceName="employment_employment_id_seq"/>
+    </changeSet>
+    <changeSet author="ars-s (generated)" id="1674571966050-5">
+        <createSequence sequenceName="hibernate_sequence"/>
+    </changeSet>
+    <changeSet author="ars-s (generated)" id="1674571966050-6">
+        <createSequence sequenceName="passport_passport_id_seq"/>
+    </changeSet>
+    <changeSet author="ars-s (generated)" id="1674571966050-7">
+        <createTable tableName="application">
+            <column autoIncrement="true" name="application_id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="application_pkey"/>
+            </column>
+            <column name="client_id" type="BIGINT"/>
+            <column name="credit_id" type="BIGINT"/>
+            <column name="status" type="VARCHAR(2147483647)"/>
+            <column name="creation_date" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="applied_offer" type="VARCHAR(2147483647)"/>
+            <column name="sign_date" type="TIMESTAMP(29) WITHOUT TIME ZONE"/>
+            <column name="ses_code" type="VARCHAR(2147483647)"/>
+            <column name="status_history" type="VARCHAR(2147483647)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="ars-s (generated)" id="1674571966050-8">
+        <createTable tableName="client">
+            <column autoIncrement="true" name="client_id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="client_pkey"/>
+            </column>
+            <column name="last_name" type="VARCHAR(2147483647)"/>
+            <column name="first_name" type="VARCHAR(2147483647)"/>
+            <column name="middle_name" type="VARCHAR(2147483647)"/>
+            <column name="birth_date" type="date"/>
+            <column name="email" type="VARCHAR(2147483647)"/>
+            <column name="gender" type="VARCHAR(2147483647)"/>
+            <column name="marital_status" type="VARCHAR(2147483647)"/>
+            <column name="dependent_amount" type="INT"/>
+            <column name="passport_id" type="INT"/>
+            <column name="employment_id" type="INT"/>
+            <column name="account" type="VARCHAR(2147483647)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="ars-s (generated)" id="1674571966050-9">
+        <createTable tableName="credit">
+            <column autoIncrement="true" name="credit_id" type="BIGINT">
+                <constraints primaryKey="true" primaryKeyName="credit_pkey"/>
+            </column>
+            <column name="amount" type="numeric(0)"/>
+            <column name="term" type="INT"/>
+            <column name="monthly_payment" type="numeric(0)"/>
+            <column name="rate" type="numeric(0)"/>
+            <column name="psk" type="numeric(0)"/>
+            <column name="payment_schedule" type="VARCHAR(2147483647)"/>
+            <column name="insurance_enable" type="BOOL"/>
+            <column name="salary_client" type="BOOL"/>
+            <column name="credit_status" type="VARCHAR(2147483647)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="ars-s (generated)" id="1674571966050-10">
+        <createTable tableName="employment">
+            <column autoIncrement="true" name="employment_id" type="INT">
+                <constraints primaryKey="true" primaryKeyName="employment_pkey"/>
+            </column>
+            <column name="status" type="VARCHAR(2147483647)"/>
+            <column name="employer_inn" type="VARCHAR(2147483647)"/>
+            <column name="salary" type="numeric(64, 2)"/>
+            <column name="position" type="VARCHAR(2147483647)"/>
+            <column name="work_experience_total" type="INT"/>
+            <column name="work_experience_current" type="INT"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="ars-s (generated)" id="1674571966050-11">
+        <createTable tableName="passport">
+            <column autoIncrement="true" name="passport_id" type="INT">
+                <constraints primaryKey="true" primaryKeyName="passport_pkey"/>
+            </column>
+            <column name="series" type="VARCHAR(2147483647)"/>
+            <column name="number" type="VARCHAR(2147483647)"/>
+            <column name="issue_branch" type="VARCHAR(2147483647)"/>
+            <column name="issue_date" type="date"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="ars-s (generated)" id="1674571966050-12">
+        <addForeignKeyConstraint baseColumnNames="client_id" baseTableName="application" constraintName="application_client_id_fkey" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="client_id" referencedTableName="client"/>
+    </changeSet>
+    <changeSet author="ars-s (generated)" id="1674571966050-13">
+        <addForeignKeyConstraint baseColumnNames="credit_id" baseTableName="application" constraintName="application_credit_id_fkey" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="credit_id" referencedTableName="credit"/>
+    </changeSet>
+    <changeSet author="ars-s (generated)" id="1674571966050-14">
+        <addForeignKeyConstraint baseColumnNames="employment_id" baseTableName="client" constraintName="client_employment_id_fkey" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="employment_id" referencedTableName="employment"/>
+    </changeSet>
+    <changeSet author="ars-s (generated)" id="1674571966050-15">
+        <addForeignKeyConstraint baseColumnNames="passport_id" baseTableName="client" constraintName="client_passport_id_fkey" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="passport_id" referencedTableName="passport"/>
+    </changeSet>
+</databaseChangeLog>
